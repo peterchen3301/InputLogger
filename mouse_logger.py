@@ -3,9 +3,10 @@ from pynput import mouse
 from input_logger import InputLogger
 
 class MouseLogger(InputLogger):
+    
     def __init__(self, time_interval):
         super().__init__(time_interval)
-        self.log += "=====MouseLogger Started====="
+        self.log += "=====MouseLogger Started=====\n"
     
     def on_move(self, x, y):
         pass
@@ -20,7 +21,7 @@ class MouseLogger(InputLogger):
         self.add_log(log)
    
     def run(self):
-        self.save_log('mouse_log.txt')
+        self.save_log('logfile//mouse_log.txt')
         mouse_listener = mouse.Listener(
         on_move=self.on_move,
         on_click=self.on_click,
