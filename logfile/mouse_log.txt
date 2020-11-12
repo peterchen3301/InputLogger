@@ -1,0 +1,6 @@
+=====MouseLogger Started=====
+2020-11-12T03:44:37-19    Button.left pressed at (1199,332)
+2020-11-12T03:44:38-59    Button.left pressed at (1532,533)
+2020-11-12T03:45:07-60    Button.left pressed at (1532,533)
+2020-11-12T03:45:23-85    Button.left pressed at (1713,1066)
+2020-11-12T03:45:24-53    Button.left pressed at (1411,796)
