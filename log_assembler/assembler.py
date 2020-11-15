@@ -54,7 +54,7 @@ class Log_assembler():
                 word.append( input_element[0] )
                 time_intvls.append( input_element[1] )
             elif word and time_intvls:
-                wordmap.append( ( "".join(word), sum(time_intvls)/len(time_intvls) ) )   
+                wordmap.append( ( "".join(word), sum(time_intvls[1:])/len(time_intvls) ) )   
                 word, time_intvls = [], []
         
         return wordmap 
@@ -62,7 +62,7 @@ class Log_assembler():
     def time_difference(self, prev_time, this_time ):
         
         prev_timelist, this_timelist = self.time_convert(prev_time), self.time_convert(this_time)
-        mul, diff = [ 24, 60, 1, 0.01 ], 0
+        mul, diff = [ 60*60, 60, 1, 0.01 ], 0
         for i in range(4):
             diff += (this_timelist[i] - prev_timelist[i]) * mul[i]
         return diff
